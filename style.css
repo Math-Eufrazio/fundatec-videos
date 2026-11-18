@@ -1,0 +1,227 @@
+/* ===========================================
+   CORES USADAS NO SITE:
+   Azul escuro: #14305a
+   Amarelo:     #f2a900
+   Texto:       #1c2430
+   Fundo:       #fbfbf9
+   =========================================== */
+
+
+/* Tira o espaço automático que o navegador coloca em tudo */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Estilo geral da página */
+body {
+  font-family: Arial, sans-serif;
+  color: #1c2430;
+  background-color: #fbfbf9;
+  line-height: 1.6;
+}
+
+
+/* ---------- TOPO ---------- */
+
+/* position: sticky + top: 0 faz o topo acompanhar a tela quando você rola */
+header {
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 40px;
+  border-bottom: 4px solid #f2a900;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+/* Tamanho do logo */
+header img {
+  height: 100px;
+  display: block;
+}
+
+nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+}
+
+/* O traço | entre os links do menu */
+nav span {
+  color: #14305a;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+nav a {
+  color: #14305a;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 10px 20px;
+  border-radius: 8px;
+}
+
+nav a:hover {
+  background-color: #f2a900;
+}
+
+
+/* ---------- CONTEÚDO ---------- */
+
+/* Deixa o conteúdo no meio da tela, com no máximo 1200px */
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 48px 20px;
+}
+
+h1 {
+  font-size: 40px;
+  line-height: 1.2;
+  color: #14305a;
+  text-align: center;
+}
+
+.intro {
+  margin-top: 14px;
+  font-size: 18px;
+  text-align: center;
+}
+
+
+/* ---------- VÍDEOS ---------- */
+
+/* justify-content: center deixa os vídeos no meio da tela.
+   Cabem 4 por linha, e quando não cabe mais, quebra a linha */
+#videos {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 24px;
+  margin-top: 28px;
+}
+
+.card {
+  width: 250px;
+}
+
+/* Tela vertical estilo TikTok */
+.card video {
+  width: 250px;
+  height: 444px;
+  background-color: #14305a;
+  border-radius: 16px;
+  object-fit: cover;
+  display: block;
+  cursor: pointer;
+}
+
+.card h2 {
+  margin-top: 12px;
+  font-size: 18px;
+  color: #14305a;
+}
+
+.card p {
+  font-size: 14px;
+  color: #5b6676;
+}
+
+
+/* ---------- VISUALIZADOR (vídeo grande) ---------- */
+
+/* Cobre a tela toda com um fundo preto meio transparente.
+   O site aparece escurecido por trás. Começa escondido (display: none) */
+#visualizador {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.75);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 20;
+}
+
+/* Quando o JavaScript adiciona a classe "aberto", ele aparece */
+#visualizador.aberto {
+  display: flex;
+}
+
+/* O vídeo ocupa 90% da altura da tela */
+#video-grande {
+  height: 90%;
+  max-width: 95%;
+  background-color: #000000;
+  border-radius: 12px;
+}
+
+/* Botão de fechar no canto de cima */
+#fechar {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 32px;
+  color: #ffffff;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+
+/* ---------- RODAPÉ ---------- */
+
+/* Fundo cinza escuro que vai escurecendo de cima pra baixo */
+footer {
+  background: linear-gradient(#4d4d4d, #262626);
+  color: #ffffff;
+  padding: 30px 20px;
+  font-size: 14px;
+}
+
+/* Dados na esquerda e redes sociais na direita */
+.rodape-conteudo {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
+footer h3 {
+  font-size: 18px;
+  font-weight: normal;
+}
+
+.redes {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  margin-top: 6px;
+}
+
+.redes a {
+  color: #ffffff;
+  text-decoration: none;
+  border: 1px solid #ffffff;
+  padding: 4px 10px;
+  border-radius: 6px;
+}
+
+.redes a:hover {
+  background-color: #f2a900;
+  color: #14305a;
+  border-color: #f2a900;
+}

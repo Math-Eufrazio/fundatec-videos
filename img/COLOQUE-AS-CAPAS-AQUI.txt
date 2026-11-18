@@ -1,0 +1,8 @@
+Capas dos videos (opcional), com estes nomes:
+
+capa1.jpg
+capa2.jpg
+capa3.jpg
+capa4.jpg
+
+(letras minusculas, sem espaco, sem acento, terminando em .jpg)
